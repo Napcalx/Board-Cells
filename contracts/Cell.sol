@@ -15,7 +15,7 @@ contract Board {
     // mapping to store the ids
     mapping (uint256 => mapping(uint256 => Color)) _boardId;
 
-    function cellLocation (uint8 cx_axis, uint8 cy_axis) public returns (Color) {
+    function cellLocation (uint8 cx_axis, uint8 cy_axis) public {
         for (uint8 x = 0; x < cx_axis; x++) {
             for (uint8 y = 0; y < cy_axis; y ++) {
                 if ((x + y) % 4 == 0) {
